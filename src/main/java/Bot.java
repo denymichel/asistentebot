@@ -3,6 +3,9 @@ import org.telegram.telegrambots.TelegramBotsApi;
 import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class But extends TelegramLongPollingBot {
     public static void main (String[] args) {
@@ -16,8 +19,28 @@ public class But extends TelegramLongPollingBot {
     }
 
     public void onUpdateReceived(Update update) {
+        Model model = new Model();
+        Message message = update.getMessage();
+        if (message != null && message.hasText()) {
+            switch (message.getText()) {
+                case "/hello":
+                    sendMsg(message, "hola soy el asistente automatico");
+                    break;
+                case "/help":
+                    sendMsg(message, "En que te puedo ayudar?");
+                    break;
+                default:
+                    try {
+                        sendMsg(message, Weather.getWeather(message.getText(), model));
+                    } catch (IOException e) {
+                        sendMsg(message, " puedes realizar reservas, ver horarios y especialidades");
+                    }
+
+            }
+        }
 
     }
+
 
     public String getBotUsername() {
         return "";
@@ -27,3 +50,4 @@ public class But extends TelegramLongPollingBot {
         return "965898434:AAFYisxZkAsAWykdChxs9DNy1ceCADAmogo";
     }
 }
+
