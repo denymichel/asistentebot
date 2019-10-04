@@ -23,11 +23,14 @@ public class But extends TelegramLongPollingBot {
         Message message = update.getMessage();
         if (message != null && message.hasText()) {
             switch (message.getText()) {
-                case "/hello":
+                case "/hola":
                     sendMsg(message, "hola soy el asistente automatico");
                     break;
-                case "/help":
+                case "/ayuda":
                     sendMsg(message, "En que te puedo ayudar?");
+                    break;
+                case "/realizar reserva":
+                    sendMsg(message, "Escoge un horario para la reserva");
                     break;
                 default:
                     try {
@@ -42,6 +45,9 @@ public class But extends TelegramLongPollingBot {
     }
 
 
+
+
+
     public String getBotUsername() {
         return "";
     }
@@ -50,4 +56,5 @@ public class But extends TelegramLongPollingBot {
         return "965898434:AAFYisxZkAsAWykdChxs9DNy1ceCADAmogo";
     }
 }
+
 
