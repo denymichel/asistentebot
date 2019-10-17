@@ -58,7 +58,7 @@ public class MainBot extends TelegramLongPollingBot{
                             "/Pediatria         " +
                             "/Traumatologia     ");
                     break;
-                    
+
             }
         }
 

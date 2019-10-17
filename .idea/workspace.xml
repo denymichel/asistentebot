@@ -70,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570479726092</updated>
       <workItem from="1570479737362" duration="7452000" />
-      <workItem from="1571352791787" duration="743000" />
+      <workItem from="1571352791787" duration="1005000" />
     </task>
     <servers />
   </component>
@@ -89,5 +89,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AsisMedBot$MainBot.ic" NAME="MainBot Coverage Results" MODIFIED="1571355122121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
