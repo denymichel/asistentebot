@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf7bcd39-717f-460b-af4b-b226f815d721" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MainBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/asistentebot.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/asistentebot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Bot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainBot.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +33,7 @@
   </component>
   <component name="ProjectId" id="1RtHyNK2tlqZwvcQGf9W9M4fECr" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -76,6 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570479726092</updated>
       <workItem from="1570479737362" duration="7452000" />
+      <workItem from="1571352791787" duration="600000" />
     </task>
     <servers />
   </component>
@@ -87,7 +86,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

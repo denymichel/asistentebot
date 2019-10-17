@@ -20,11 +20,11 @@ public class MainBot extends TelegramLongPollingBot{
     public static void main (String[] args) {
         ApiContextInitializer.init();
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
-    try { telegramBotsApi.registerBot(new MainBot());
-    } catch (TelegramApiRequestException e) {
-        e.printStackTrace();
+        try { telegramBotsApi.registerBot(new MainBot());
+        } catch (TelegramApiRequestException e) {
+            e.printStackTrace();
+        }
     }
-  }
 
 
     public void sendMsg(Message message, String text){
@@ -42,28 +42,31 @@ public class MainBot extends TelegramLongPollingBot{
     }
 
     public void onUpdateReceived(Update update) {
-    //  Model model = new Model();
+        //  Model model = new Model();
         Message message = update.getMessage();
         if (message != null && message.hasText()) {
             switch (message.getText()) {
-
                 case "/inicio":
 
-                   // sendMsg(message, "");
+                    sendMsg(message, "Hola soy el asistente 'lalito'                 " +
+                            "En que te puedo ayudar?"
+                    );
                     break;
                 case "/ReservarCitaMedica":
-                  //  sendMsg(message, "" );
-
+                    sendMsg(message, "Porfavor seleccione una especialidad       " );
+                    sendMsg(message,      "/MedicinaGeneral      " +
+                            "/Pediatria         " +
+                            "/Traumatologia     ");
                     break;
 
                 case "/VerEspecialidades":
-                //    sendMsg(message, "/");
-
+                    
                 default:
             }
         }
 
     }
+
     public void setButtons(SendMessage sendMessage){
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         sendMessage.setReplyMarkup(replyKeyboardMarkup);
@@ -80,7 +83,6 @@ public class MainBot extends TelegramLongPollingBot{
 
         keyboardRowsList.add(keyboardFirstRow);
         replyKeyboardMarkup.setKeyboard(keyboardRowsList);
-
     }
 
 
