@@ -48,7 +48,7 @@ public class MainBot extends TelegramLongPollingBot{
             switch (message.getText()) {
                 case "/inicio":
 
-                    sendMsg(message, "Hola soy el asistente 'lalito'                 " +
+                    sendMsg(message, "hola soy el asistente automatico                 " +
                             "En que te puedo ayudar?"
                     );
                     break;
@@ -59,6 +59,11 @@ public class MainBot extends TelegramLongPollingBot{
                             "/Traumatologia     ");
                     break;
 
+                case "/VerEspecialidades":
+                    sendMsg(message, "/MedicinaGeneral");
+                    sendMsg(message, "/Pediatria");
+                    sendMsg(message, "/Traumatologia");
+                default:
             }
         }
 
@@ -91,7 +96,3 @@ public class MainBot extends TelegramLongPollingBot{
         return "965898434:AAFYisxZkAsAWykdChxs9DNy1ceCADAmogo";
     }
 }
-
-
-
-
