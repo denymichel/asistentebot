@@ -64,8 +64,22 @@ public class MainBot extends TelegramLongPollingBot{
         }
 
     }
-
     public void setButtons(SendMessage sendMessage){
+        ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+        sendMessage.setReplyMarkup(replyKeyboardMarkup);
+        replyKeyboardMarkup.setSelective(true);
+        replyKeyboardMarkup.setResizeKeyboard(true);
+        replyKeyboardMarkup.setOneTimeKeyboard(false);
+
+        List<KeyboardRow> keyboardRowsList = new ArrayList<>();
+        KeyboardRow keyboardFirstRow = new KeyboardRow();
+
+        //keyboardFirstRow.add(new KeyboardButton( "/inicio"));
+        keyboardFirstRow.add(new KeyboardButton( "/ReservarCitaMedica"));
+        keyboardFirstRow.add(new KeyboardButton( "/VerEspecialidades"));
+
+        keyboardRowsList.add(keyboardFirstRow);
+        replyKeyboardMarkup.setKeyboard(keyboardRowsList);
 
     }
 
