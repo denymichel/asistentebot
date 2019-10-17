@@ -3,9 +3,16 @@ import org.telegram.telegrambots.TelegramBotsApi;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
+import org.telegram.telegrambots.api.objects.replykeyboard.ReplyKeyboardMarkup;
+import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardButton;
+import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
+
+import javax.validation.groups.ConvertGroup;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainBot extends TelegramLongPollingBot{
@@ -27,6 +34,7 @@ public class MainBot extends TelegramLongPollingBot{
         sendMessage.setReplyToMessageId(message.getMessageId());
         sendMessage.setText(text);
         try {
+            setButtons(sendMessage);
             sendMessage(sendMessage);
         }catch (TelegramApiException e){
             e.printStackTrace();
@@ -38,34 +46,36 @@ public class MainBot extends TelegramLongPollingBot{
         Message message = update.getMessage();
         if (message != null && message.hasText()) {
             switch (message.getText()) {
-                case "/help":
-                    sendMsg(message, "hola soy el asistente automatico");
+
+                case "/inicio":
+
+                   // sendMsg(message, "");
                     break;
-                case "/ayuda":
-                    sendMsg(message, "En que te puedo ayudar?");
+                case "/ReservarCitaMedica":
+                  //  sendMsg(message, "" );
+
                     break;
+
+                case "/VerEspecialidades":
+                //    sendMsg(message, "/");
+
                 default:
-       /*         case "/realizar reserva":
-                    sendMsg(message, "Escoge un horario para la reserva");
-                    break;
-                default:
-                    try {
-                        sendMsg(message, Weather.getWeather(message.getText(), model));
-                    } catch (IOException e) {
-                        sendMsg(message, " puedes realizar reservas, ver horarios y especialidades");
-                    }
-        */
             }
         }
 
     }
 
+    public void setButtons(SendMessage sendMessage){
+
+    }
+
+
     public String getBotUsername() {
-        return "GeoDanAlvBot";
+        return "AsisMedBot";
     }
 
     public String getBotToken() {
-        return "845095054:AAHnNtOMHFcanYBH4v7N2bIk8ij3mA9THFc";
+        return "965898434:AAFYisxZkAsAWykdChxs9DNy1ceCADAmogo";
     }
 }
 
