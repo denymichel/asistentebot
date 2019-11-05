@@ -1,3 +1,5 @@
+package com.asismed.asistentem.bot;
+
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.TelegramBotsApi;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
@@ -10,7 +12,6 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
 
-import javax.validation.groups.ConvertGroup;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,17 +34,17 @@ public class MainBot extends TelegramLongPollingBot{
         sendMessage.setChatId(message.getChatId().toString());
         sendMessage.setReplyToMessageId(message.getMessageId());
         sendMessage.setText(text);
-        try {
-            setButtons(sendMessage);
+       try {
+          setButtons(sendMessage);
            // sendMessage(sendMessage);
-        }catch (TelegramApiException e){
-            e.printStackTrace();
+      }catch (TelegramApiException e){
+           e.printStackTrace();
         }
-    }
+   }
 
     public void onUpdateReceived(Update update) {
         //  Model model = new Model();
-        Message message = update.getMessage();
+      //  Message message = update.getMessage();
         if (message != null && message.hasText()) {
             switch (message.getText()) {
                 case "/inicio":
